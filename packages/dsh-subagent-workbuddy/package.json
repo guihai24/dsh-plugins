@@ -1,7 +1,7 @@
 {
   "name": "dsh-subagent-workbuddy",
   "version": "0.1.0",
-  "description": "One-shot WorkBuddy (CodeBuddy CLI) subagent provider for DeepSeek Harness",
+  "description": "One-shot WorkBuddy (CodeBuddy CLI) subagent provider for DeepSeek Harness: a subagent_workbuddy delegation tool that runs the CLI bundled with WorkBuddy.app / @tencent-ai/codebuddy-code in the parent workspace.",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -19,6 +19,25 @@
   ],
   "license": "MIT",
   "icon": "./icon.svg",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "workbuddy",
+    "codebuddy",
+    "subagent",
+    "delegation",
+    "coding-agent"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guihai24/dsh-plugins.git",
+    "directory": "packages/dsh-subagent-workbuddy"
+  },
+  "homepage": "https://github.com/guihai24/dsh-plugins/tree/main/packages/dsh-subagent-workbuddy",
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"

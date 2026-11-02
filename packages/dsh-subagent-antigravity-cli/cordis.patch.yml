@@ -3,7 +3,7 @@
 # as the global tool `subagent_antigravity`.
 - insert:
     - id: subagent-antigravity
-      name: 'dsh-subagent-antigravity'
+      name: 'dsh-subagent-antigravity-cli'
       config:
         providerName: antigravity
         mode: auto

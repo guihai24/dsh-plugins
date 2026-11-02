@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Generate the format-1 plugin market index for this repository.
 
-Usage: python3 scripts/build-index.py [commit]
+Usage:
+    python3 scripts/build-index.py [--npm] [commit]
 
-The commit defaults to the current HEAD. Every plugin under packages/ becomes an
-entry whose single version is pinned to that commit, so `index.json` must be
-regenerated and committed after every release.
+Without --npm every plugin version is a `git` source pinned to `commit`
+(default: current HEAD), so regenerate and commit after every release.
+With --npm the source is the package's npm release; publish first, then rerun.
 """
 import base64
 import json
@@ -21,8 +22,6 @@ AUTHOR = 'guihai24'
 
 
 def commit_sha():
-    if len(sys.argv) > 1:
-        return sys.argv[1]
     return subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
 
 
@@ -31,13 +30,19 @@ def read_locale(package_dir, locale):
     return meta['title'], meta['description']
 
 
-def build_plugin(package_dir, commit):
+def build_plugin(package_dir, use_npm, commit):
     manifest = json.loads((package_dir / 'package.json').read_text(encoding='utf-8'))
     zh_title, zh_desc = read_locale(package_dir, 'zh')
     en_title, en_desc = read_locale(package_dir, 'en')
     icon = 'data:image/svg+xml;base64,' + base64.b64encode(
         (package_dir / 'icon.svg').read_bytes()).decode('ascii')
     relative = package_dir.relative_to(ROOT).as_posix()
+    source = {'type': 'npm'} if use_npm else {
+        'type': 'git',
+        'url': REPO_URL,
+        'commit': commit,
+        'path': relative,
+    }
     return {
         'name': manifest['name'],
         'title': {'zh': zh_title, 'en': en_title},
@@ -55,12 +60,7 @@ def build_plugin(package_dir, commit):
             {
                 'version': manifest['version'],
                 'publishTimestamp': int(time.time()),
-                'source': {
-                    'type': 'git',
-                    'url': REPO_URL,
-                    'commit': commit,
-                    'path': relative,
-                },
+                'source': source,
                 'engines': {'dsh': DIST_RANGE},
             }
         ],
@@ -68,9 +68,11 @@ def build_plugin(package_dir, commit):
 
 
 def main():
-    commit = commit_sha()
+    args = [arg for arg in sys.argv[1:] if not arg.startswith('--')]
+    use_npm = '--npm' in sys.argv
+    commit = args[0] if args else commit_sha()
     plugins = [
-        build_plugin(package_dir, commit)
+        build_plugin(package_dir, use_npm, commit)
         for package_dir in sorted((ROOT / 'packages').iterdir())
         if (package_dir / 'package.json').is_file()
     ]
@@ -86,7 +88,8 @@ def main():
     }
     out = ROOT / 'index.json'
     out.write_text(json.dumps(index, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print(f'wrote {out} ({len(plugins)} plugins, commit {commit})')
+    mode = 'npm' if use_npm else f'git@{commit[:12]}'
+    print(f'wrote {out} ({len(plugins)} plugins, source {mode})')
 
 
 if __name__ == '__main__':

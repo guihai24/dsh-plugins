@@ -11,7 +11,7 @@
   "metadata": {},
   "plugins": [
     {
-      "name": "dsh-subagent-antigravity",
+      "name": "dsh-subagent-antigravity-cli",
       "title": {
         "zh": "Antigravity 子智能体",
         "en": "Antigravity subagent"
@@ -22,25 +22,32 @@
       },
       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+CiAgPHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iNyIgZmlsbD0iIzVCN0NGQSIvPgogIDxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iNyIgZmlsbD0iIzNGQkY5QSIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgcng9IjciIGZpbGw9IiM1QjdDRkEiIGZpbGwtb3BhY2l0eT0iMC41NSIvPgo8L3N2Zz4K",
       "author": "guihai24",
-      "homepage": "https://github.com/guihai24/dsh-plugins/tree/main/packages/dsh-subagent-antigravity",
+      "homepage": "https://github.com/guihai24/dsh-plugins/tree/main/packages/dsh-subagent-antigravity-cli",
       "repository": {
         "url": "https://github.com/guihai24/dsh-plugins",
-        "directory": "packages/dsh-subagent-antigravity"
+        "directory": "packages/dsh-subagent-antigravity-cli"
       },
       "metadata": {
-        "keywords": [],
+        "keywords": [
+          "dsh-plugin",
+          "deepseek-harness",
+          "dsh",
+          "antigravity",
+          "agy",
+          "google-antigravity",
+          "subagent",
+          "delegation",
+          "coding-agent"
+        ],
         "labels": [],
         "sortKeys": {}
       },
       "versions": [
         {
           "version": "0.1.0",
-          "publishTimestamp": 1793601858,
+          "publishTimestamp": 1793605138,
           "source": {
-            "type": "git",
-            "url": "https://github.com/guihai24/dsh-plugins",
-            "commit": "fa4b91425b4ec1c8f5e96750c79ad30360958cbe",
-            "path": "packages/dsh-subagent-antigravity"
+            "type": "npm"
           },
           "engines": {
             "dsh": ">=0.2.1-rc.2 <0.3.0-0"
@@ -66,19 +73,25 @@
         "directory": "packages/dsh-subagent-workbuddy"
       },
       "metadata": {
-        "keywords": [],
+        "keywords": [
+          "dsh-plugin",
+          "deepseek-harness",
+          "dsh",
+          "workbuddy",
+          "codebuddy",
+          "subagent",
+          "delegation",
+          "coding-agent"
+        ],
         "labels": [],
         "sortKeys": {}
       },
       "versions": [
         {
           "version": "0.1.0",
-          "publishTimestamp": 1793601858,
+          "publishTimestamp": 1793605138,
           "source": {
-            "type": "git",
-            "url": "https://github.com/guihai24/dsh-plugins",
-            "commit": "fa4b91425b4ec1c8f5e96750c79ad30360958cbe",
-            "path": "packages/dsh-subagent-workbuddy"
+            "type": "npm"
           },
           "engines": {
             "dsh": ">=0.2.1-rc.2 <0.3.0-0"

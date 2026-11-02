@@ -7,7 +7,7 @@ Community [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) pl
 
 | Plugin | Tool | Backend |
 |---|---|---|
-| [`packages/dsh-subagent-antigravity`](packages/dsh-subagent-antigravity) | `subagent_antigravity` | Google Antigravity CLI (`agy`) |
+| [`packages/dsh-subagent-antigravity-cli`](packages/dsh-subagent-antigravity-cli) | `subagent_antigravity` | Google Antigravity CLI (`agy`) |
 | [`packages/dsh-subagent-workbuddy`](packages/dsh-subagent-workbuddy) | `subagent_workbuddy` | WorkBuddy's bundled CodeBuddy CLI (`codebuddy`) |
 
 Both are one-shot subagent providers: the parent Agent delegates a self-contained text task, a
@@ -24,6 +24,14 @@ https://raw.githubusercontent.com/huaguihai/dsh-plugins/main/index.json
 ```
 
 Then search for "Antigravity" or "WorkBuddy" and install.
+
+## Install from npm
+
+```bash
+npm i -g dsh-subagent-antigravity-cli dsh-subagent-workbuddy
+# or install into a profile:
+dsh plugin --profile <profile> add dsh-subagent-workbuddy
+```
 
 ## Install without the market
 
