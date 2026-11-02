@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "WorkBuddy subagent",
+    "description": "Delegate one task using native WorkBuddy (CodeBuddy CLI) authentication and settings."
+  }
+}

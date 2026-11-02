@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "WorkBuddy 子智能体",
+    "description": "使用 WorkBuddy（CodeBuddy CLI）原生登录和设置委派单个任务。"
+  }
+}

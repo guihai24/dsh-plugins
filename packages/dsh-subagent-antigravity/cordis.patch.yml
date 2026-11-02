@@ -1,0 +1,18 @@
+# Profile layer contributed by dsh-subagent-antigravity:
+# registers the one-shot Antigravity CLI provider and exposes it to every Agent
+# as the global tool `subagent_antigravity`.
+- insert:
+    - id: subagent-antigravity
+      name: 'dsh-subagent-antigravity'
+      config:
+        providerName: antigravity
+        mode: auto
+        sandbox: true
+        dangerouslySkipPermissions: false
+        timeoutSeconds: 0
+    - id: tool-subagent-antigravity
+      name: '@deepseek-ai/dsh-tool-subagent'
+      config:
+        provider: antigravity
+        toolName: subagent_antigravity
+        maxDepth: provider-managed

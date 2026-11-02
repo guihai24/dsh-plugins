@@ -1,0 +1,17 @@
+# Profile layer contributed by dsh-subagent-workbuddy:
+# registers the one-shot WorkBuddy (CodeBuddy CLI) provider and exposes it to
+# every Agent as the global tool `subagent_workbuddy`.
+- insert:
+    - id: subagent-workbuddy
+      name: 'dsh-subagent-workbuddy'
+      config:
+        providerName: workbuddy
+        permissionMode: auto
+        dangerouslySkipPermissions: false
+        maxTurns: 0
+    - id: tool-subagent-workbuddy
+      name: '@deepseek-ai/dsh-tool-subagent'
+      config:
+        provider: workbuddy
+        toolName: subagent_workbuddy
+        maxDepth: provider-managed
