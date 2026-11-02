@@ -1,0 +1,90 @@
+{
+  "format": 1,
+  "title": {
+    "zh": "guihai24 的 DSH 插件",
+    "en": "guihai24's DSH plugins"
+  },
+  "description": {
+    "zh": "Antigravity（agy）与 WorkBuddy（codebuddy）一次性子智能体后端。",
+    "en": "One-shot Antigravity (agy) and WorkBuddy (codebuddy) subagent backends for DeepSeek Harness."
+  },
+  "metadata": {},
+  "plugins": [
+    {
+      "name": "dsh-subagent-antigravity",
+      "title": {
+        "zh": "Antigravity 子智能体",
+        "en": "Antigravity subagent"
+      },
+      "description": {
+        "zh": "使用 Antigravity CLI (agy) 原生登录和设置委派单个任务。",
+        "en": "Delegate one task using native Antigravity CLI (agy) authentication and settings."
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+CiAgPHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iNyIgZmlsbD0iIzVCN0NGQSIvPgogIDxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iNyIgZmlsbD0iIzNGQkY5QSIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgcng9IjciIGZpbGw9IiM1QjdDRkEiIGZpbGwtb3BhY2l0eT0iMC41NSIvPgo8L3N2Zz4K",
+      "author": "guihai24",
+      "homepage": "https://github.com/guihai24/dsh-plugins/tree/main/packages/dsh-subagent-antigravity",
+      "repository": {
+        "url": "https://github.com/guihai24/dsh-plugins",
+        "directory": "packages/dsh-subagent-antigravity"
+      },
+      "metadata": {
+        "keywords": [],
+        "labels": [],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1793601858,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/guihai24/dsh-plugins",
+            "commit": "fa4b91425b4ec1c8f5e96750c79ad30360958cbe",
+            "path": "packages/dsh-subagent-antigravity"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-subagent-workbuddy",
+      "title": {
+        "zh": "WorkBuddy 子智能体",
+        "en": "WorkBuddy subagent"
+      },
+      "description": {
+        "zh": "使用 WorkBuddy（CodeBuddy CLI）原生登录和设置委派单个任务。",
+        "en": "Delegate one task using native WorkBuddy (CodeBuddy CLI) authentication and settings."
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+CiAgPHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iNyIgZmlsbD0iI0Y1QTYyMyIvPgogIDxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iNyIgZmlsbD0iI0UwNUM1QyIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgcng9IjciIGZpbGw9IiNGNUE2MjMiIGZpbGwtb3BhY2l0eT0iMC41NSIvPgo8L3N2Zz4K",
+      "author": "guihai24",
+      "homepage": "https://github.com/guihai24/dsh-plugins/tree/main/packages/dsh-subagent-workbuddy",
+      "repository": {
+        "url": "https://github.com/guihai24/dsh-plugins",
+        "directory": "packages/dsh-subagent-workbuddy"
+      },
+      "metadata": {
+        "keywords": [],
+        "labels": [],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1793601858,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/guihai24/dsh-plugins",
+            "commit": "fa4b91425b4ec1c8f5e96750c79ad30360958cbe",
+            "path": "packages/dsh-subagent-workbuddy"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    }
+  ]
+}
